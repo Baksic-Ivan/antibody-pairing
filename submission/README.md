@@ -1,4 +1,4 @@
-# Add-Your-Team-Name-Here
+# WAP-Wet-Azz-Proteins
 
 Our team is from ... and we think proteins are cool 🙌
 
