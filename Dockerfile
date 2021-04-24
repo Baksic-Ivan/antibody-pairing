@@ -6,7 +6,6 @@ RUN pip3 install argparse -y
 RUN pip3 install joblib -y
 
 
-RUN wget https://www.dropbox.com/s/4sdu3b3u83voldy/finalized_model.sav?dl=0
 
 COPY . .
 
