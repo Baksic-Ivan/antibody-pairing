@@ -265,7 +265,7 @@ Clasiffier.compile(loss="binary_crossentropy", optimizer=optimizer, metrics=["ac
 x_1 = seq_to_number(list(data.Hchain), MAX_LENGTH) #ovo triba prominit ui data.Hchain, data.Lchain
 x_2 = seq_to_number(list(data.Lchain), MAX_LENGTH)
 
-Clasiffier.load_weights('./Model_w.h5')
+Clasiffier.load_weights('src/Model_w.h5')
 
 y_pred = Clasiffier.predict([x_1, x_2])
 
