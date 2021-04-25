@@ -261,8 +261,8 @@ Clasiffier = create_model()
 optimizer = tf.keras.optimizers.Adam(learning_rate= 0.0005)
 Clasiffier.compile(loss="binary_crossentropy", optimizer=optimizer, metrics=["accuracy", "AUC"])
 
-x_1 = seq_to_number(list(data.HeavyChain), MAX_LENGTH) #ovo triba prominit ui data.Hchain, data.Lchain
-x_2 = seq_to_number(list(data.LightChain), MAX_LENGTH)
+x_1 = seq_to_number(list(data.Hchain), MAX_LENGTH) #ovo triba prominit ui data.Hchain, data.Lchain
+x_2 = seq_to_number(list(data.Lchain), MAX_LENGTH)
 
 Clasiffier.load_weights('./Model_w.h5')
 
@@ -270,3 +270,4 @@ y_pred = Clasiffier.predict([x_1, x_2])
 
 # SAVE PREDICTIONS WITH THE COLUMN NAME prediction IN THE FILE predictions.csv
 pd.DataFrame(y_pred[:,0], columns=['prediction']).to_csv("predictions.csv", index=False)
+print(pd.DataFrame(y_pred[:,0], columns=['prediction']))
