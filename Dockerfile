@@ -6,7 +6,6 @@ RUN pip3 install argparse -y
 RUN pip3 install joblib -y
 
 
-
 COPY . .
 
 ENTRYPOINT [ "python", "src/predict.py" ]
